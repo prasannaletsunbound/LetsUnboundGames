@@ -1,0 +1,206 @@
+body {
+    background-color: #ffc14fc3;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+#imgid{
+    position: absolute;
+    width: 100%;
+    margin: 0 80%;
+
+}
+
+
+
+#logo{
+    display: flex;
+    position: absolute;
+    top: 80px;
+    left: 10px;
+    width: 100%;
+    align-self: center;
+    align-items: center;
+    
+    
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.tree {
+    position: relative;
+    width: 400px;
+    height: 800px;
+}
+
+.trunk {
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 20px);
+    width: 40px;
+    height: 100px;
+    background-color: #8B4513;
+    }
+
+.tree:before,
+.tree:after {
+    content: '';
+    position: absolute;
+    bottom: 100px;
+    left: calc(50% - 100px);
+    width: 0;
+    height: 0;
+}
+
+.tree:before {
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 400px solid #006400;
+    transform-origin: bottom;
+    animation: sway 2s infinite ease-in-out alternate;
+}
+
+.tree:after {
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 300px solid #006400;
+    transform-origin: bottom;
+    animation: sway 3s infinite ease-in-out alternate;
+}
+
+@keyframes sway {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    50% {
+        transform: rotateZ(5deg);
+    }
+    100% {
+        transform: rotateZ(0deg);
+    }
+}
+
+.text {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 48px;
+    font-weight: bold;
+    color: #000000;
+    animation: slideIn 2s forwards;
+}
+.text1 {
+    position: absolute;
+
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 48px;
+    font-weight: bold;
+    color: #000000;
+   
+    
+}
+@keyframes slideIn {
+    0% {
+        bottom: -100px;
+    }
+    100% {
+        bottom: 50px;
+    }
+}
+@keyframes slideIn1 {
+    0% {
+        bottom: -100px;
+    }
+    100% {
+        bottom: 50px;
+    }
+}
+
+
+.text span {
+    display: inline-block;
+    animation: pulse 2s infinite;
+}
+
+.text1 span {
+    display: inline-block;
+    animation: pulse 2s infinite;
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.text::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 3px;
+    background-color: #3247ff;
+    animation: bounce 2s infinite;
+}
+
+.text1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 3px;
+    background-color: #3247ff;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        width: 50%;
+    }
+    50% {
+        width: 80%;
+    }
+}
+
+/* Add styles for the buttons */
+.buttons {
+    position: absolute;
+   
+    width: 100%;
+   
+}
+
+.button {
+    margin-bottom: 10px;
+    padding: 15px 10px;
+    background-color: #3247ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+   
+}
